@@ -19,39 +19,45 @@ export default function Card({}) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <motion.div
-      onClick={() => setIsOpen(true)}
-      className="aspect-[1.8] w-full max-w-screen-lg bg-transparent"
-      style={{ perspective: 1000 }} // Add perspective here
-      title='Open Letter'
-      disabled={isOpen}
-    >
+    <>
+      
       <motion.div
-        className="relative w-full h-full"
-        whileHover={!isOpen && {
-            rotateX: -12
-        }}
-        animate={isOpen ? "opened" : "closed"}
-        variants={cardVariants}
-        transition={{
-            duration: 1.5,
-            ease: 'easeOut'
-        }}
-        style={{ transformStyle: "preserve-3d" }} // Ensure preserve-3d is on the inner div
+        onClick={() => setIsOpen(true)}
+        className="aspect-[1.8] w-full max-w-screen-lg bg-transparent"
+        style={{ perspective: 1000 }} // Add perspective here
+        title='Open Letter'
+        disabled={isOpen}
       >
-        <div
-          className="absolute w-full h-full"
-          style={{ backfaceVisibility: "hidden" }}
+      <div className="absolute -left-48 top-1/2 w-64 aspect-square">
+        <Image src='/stickers/computer.png' alt='' fill style={{ objectFit: "contain" }}/>
+      </div>
+        <motion.div
+          className="relative w-full h-full"
+          whileHover={!isOpen && {
+              rotateX: -12
+          }}
+          animate={isOpen ? "opened" : "closed"}
+          variants={cardVariants}
+          transition={{
+              duration: 1.5,
+              ease: 'easeOut'
+          }}
+          style={{ transformStyle: "preserve-3d" }} // Ensure preserve-3d is on the inner div
         >
-          <Image
-            src="/test-card.jpg"
-            alt="Welcome to Houston Post Card"
-            fill
-            style={{ objectFit: "cover" }}
-          />
-        </div>
-        <Letter/>
+          <div
+            className="absolute w-full h-full"
+            style={{ backfaceVisibility: "hidden" }}
+          >
+            <Image
+              src="/test-card.jpg"
+              alt="Welcome to Houston Post Card"
+              fill
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+          <Letter/>
+        </motion.div>
       </motion.div>
-    </motion.div>
+    </>
   );
 }
