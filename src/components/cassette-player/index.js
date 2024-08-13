@@ -34,7 +34,7 @@ export default function CassettePlayer({}) {
         }}
       >
         <CassettePlayerSvg
-          className="w-[870px] outline-none"
+          className="xl:w-[870px] lg:w-[512px] md:w-96 w-64 outline-none"
           whileHover={{
             scale: 1.01,
             transition: { duration: 0.3 },
