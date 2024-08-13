@@ -49,18 +49,38 @@ export default function Letter({}) {
           </p>
         </div>
       </div>
-      <div className="flex-1">
+      <div className="flex-1 flex flex-col justify-around">
         <div>
           <div className="flex justify-end">
             <div className="relative w-32 h-[80px]">
               <Image src="/stamp.png" alt="stamp" fill />
             </div>
           </div>
-          <h3 className={`${specialFont.className} text-5xl rotate-[15deg] text-[#5755FE] font-bold`}>
-                YOU HAVE UNTIL 10/31/24 TO SIGN UP
-            </h3>
+          <h3
+            className={`${specialFont.className} text-5xl rotate-[15deg] text-[#5755FE] font-bold`}
+          >
+            YOU HAVE UNTIL 10/31/24 TO SIGN UP
+          </h3>
         </div>
-        <div></div>
+        <div
+          className={`${paragraphFont.className} text-4xl font-normal flex flex-col relative mt-10`}
+        >
+          <div className="flex flex-col gap-3">
+            <p>Houstonian Hackers</p>
+            <p>401 Franklin St,</p>
+            <p>Houston, Texas</p>
+            <p>77201</p>
+          </div>
+          <div className="absolute w-full h-full top-0 left-0 flex flex-col gap-12 pt-5">
+            <hr className="border-t-[2px] border-black/25" />
+            <hr className="border-t-[2px] border-black/25" />
+            <hr className="border-t-[2px] border-black/25" />
+            <hr className="border-t-[2px] border-black/25" />
+          </div>
+        </div>
+        <div className="absolute right-0 bottom-0 aspect-[4/3] w-[200px]">
+            <Image src='/stickers/enjoy.png' fill alt="Hack Club`s enjoy sticker"/>
+        </div>
       </div>
     </div>
   );

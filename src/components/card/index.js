@@ -23,6 +23,8 @@ export default function Card({}) {
       onClick={() => setIsOpen(true)}
       className="aspect-[1.8] w-full max-w-screen-lg bg-transparent"
       style={{ perspective: 1000 }} // Add perspective here
+      title='Open Letter'
+      disabled={isOpen}
     >
       <motion.div
         className="relative w-full h-full"
