@@ -24,11 +24,11 @@ export default function Card({}) {
       <motion.div
         onClick={() => setIsOpen(true)}
         className="aspect-[1.8] w-full max-w-screen-lg bg-transparent"
-        style={{ perspective: 1000 }} // Add perspective here
-        title='Open Letter'
+        style={{ perspective: 1000, cursor: isOpen ? 'default' : 'pointer' }} // Add perspective here
+        title={!isOpen && 'Open Letter'}
         disabled={isOpen}
       >
-      <div className="absolute -left-48 top-1/2 w-64 aspect-square">
+      <div className="absolute -left-48 top-1/2 w-64 aspect-square ">
         <Image src='/stickers/computer.png' alt='' fill style={{ objectFit: "contain" }}/>
       </div>
         <motion.div
@@ -45,7 +45,7 @@ export default function Card({}) {
           style={{ transformStyle: "preserve-3d" }} // Ensure preserve-3d is on the inner div
         >
           <div
-            className="absolute w-full h-full"
+            className="absolute w-full h-full shadow-lg"
             style={{ backfaceVisibility: "hidden" }}
           >
             <Image

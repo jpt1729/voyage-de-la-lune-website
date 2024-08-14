@@ -14,6 +14,7 @@ export default function RootLayout({ children }) {
       <body className={paragraphFont.className}>
         <Navbar />
         {children}
+        
       </body>
     </html>
   );

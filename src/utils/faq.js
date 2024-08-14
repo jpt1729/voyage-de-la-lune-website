@@ -13,7 +13,6 @@ export const questions = [
     question: "The venue is kind of far away. Can you pay for my gas?",
     answer: (
       <>
-        We say: “
         <Link
           href="https://gas.hackclub.com/"
           title="HackClub gas fund link"
@@ -22,7 +21,7 @@ export const questions = [
           HackClub gas fund
         </Link>{" "}
         can pay for your gas! If you are from out of state, we are also
-        providing travel stipends”
+        providing travel stipends
       </>
     ),
   },
@@ -54,14 +53,14 @@ export const questions = [
 
 export function RenderQuestion({ question }) {
   return (
-    <div className="">
+    <>
       <p className="max-w-screen-sm w-full">
         {question.name} asks:{" "}
         <span className="font-bold">{question.question}</span>
       </p>
-      <div className="flex flex-start">
-        <p className="max-w-screen-sm w-full ml-5">We say: {question.answer}</p>
+      <div className="flex justify-end py-6">
+        <p className="max-w-screen-sm w-full ml-auto">We say: “{question.answer}”</p>
       </div>
-    </div>
+    </>
   );
 }
