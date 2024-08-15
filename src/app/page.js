@@ -10,7 +10,7 @@ import { questions, RenderQuestion } from "@/utils/faq";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between lg:p-24 md:py-24 p-6 py-16">
-      <div className="flex w-full">
+      <div id='home' className="flex w-full scroll-mt-16">
         <div className="flex-1 h-full">
           <div className="relative max-h-60 h-full aspect-square md:block hidden">
             <Image
@@ -47,8 +47,8 @@ export default function Home() {
         </div>
       </div>
       <Card />
-      <div className="lg:h-64 h-32 w-full flex justify-between">{/*SPACER BOX*/}</div>
-      <div className="w-full">
+      <div id='apply' className="w-full">
+        <div className="lg:h-64 h-32 w-full flex justify-between">{/*SPACER BOX*/}</div>
         <div className="flex flex-start w-full h-auto pb-16">
           <h2
             className={`${specialFont.className} lg:text-9xl text-4xl text-purple font-bold rotate-[-12deg]`}
@@ -67,7 +67,7 @@ export default function Home() {
           <Image src="/stickers/mac.png" alt="" fill style={{ objectFit: "contain" }}/>
         </div>
       </div>
-      <div>
+      <div id='faq' className="scroll-mt-16 pt-6">
         <h2 className={`${headingFont.className} lg:text-7xl text-4xl text-purple`}>FUTURE PARTICIPANTS <br className="lg:hidden"/> ARE ASKING</h2>
         <div className="py-6">
           {questions && questions.map(

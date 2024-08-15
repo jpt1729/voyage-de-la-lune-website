@@ -19,7 +19,7 @@ export default function Navbar({}) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <div className="fixed top-0 left-0 flex justify-center w-screen z-50 py-4 bg-bg border-b-accent border-b-2">
+      <div className="fixed top-0 left-0 flex justify-center w-screen z-50 py-4 bg-bg border-b-accent border-b-2 shadow">
         <nav
           className={`w-full max-w-screen-xl items-center ${headingFont.className} flex justify-between md:text-4xl text-xl md:px-2 px-6 `}
         >
@@ -27,10 +27,30 @@ export default function Navbar({}) {
             VOYAGE DE LA LUNE
           </h1>
           <li className="list-none md:flex gap-4 hidden">
-            <ol>HOME</ol>
-            <ol>ABOUT</ol>
-            <ol>APPLY</ol>
-            <ol>FAQ</ol>
+            <Link
+              href="#home"
+              className="hover:text-accent transition-colors hover:underline"
+            >
+              HOME
+            </Link>
+            <Link
+              href="#card"
+              className="hover:text-accent transition-colors hover:underline"
+            >
+              ABOUT
+            </Link>
+            <Link
+              href="#apply"
+              className="hover:text-accent transition-colors hover:underline"
+            >
+              APPLY
+            </Link>
+            <Link
+              href="#faq"
+              className="hover:text-accent transition-colors hover:underline"
+            >
+              FAQ
+            </Link>
           </li>
           <MenuButton
             title="Open navbar menu"
@@ -43,6 +63,9 @@ export default function Navbar({}) {
         </nav>
       </div>
       <motion.div
+        initial={{
+          y: "-100%",
+        }}
         animate={
           isOpen
             ? {
@@ -53,7 +76,7 @@ export default function Navbar({}) {
               }
         }
         transition={{
-          duration: 1.5,
+          duration: 0.65,
           ease: "easeOut",
         }}
         className={`fixed top-[60px] w-screen bg-bg z-40 p-6 shadow `}
@@ -61,10 +84,42 @@ export default function Navbar({}) {
         <li
           className={`list-none text-4xl flex flex-col gap-4 ${headingFont.className} font-normal`}
         >
-          <ol>HOME</ol>
-          <ol>ABOUT</ol>
-          <ol>APPLY</ol>
-          <ol>FAQ</ol>
+          <Link
+            href="#home"
+            onClick={() => {
+              setIsOpen(false)
+            }}
+            className="hover:text-accent transition-colors hover:underline"
+          >
+            HOME
+          </Link>
+          <Link
+            href="#card"
+            onClick={() => {
+              setIsOpen(false)
+            }}
+            className="hover:text-accent transition-colors hover:underline"
+          >
+            ABOUT
+          </Link>
+          <Link
+            href="#apply"
+            onClick={() => {
+              setIsOpen(false)
+            }}
+            className="hover:text-accent transition-colors hover:underline"
+          >
+            APPLY
+          </Link>
+          <Link
+            href="#faq"
+            onClick={() => {
+              setIsOpen(false)
+            }}
+            className="hover:text-accent transition-colors hover:underline"
+          >
+            FAQ
+          </Link>
         </li>
         Stay frosty ❄️
       </motion.div>

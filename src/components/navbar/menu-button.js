@@ -22,7 +22,7 @@ export default function MenuButton({ isOpen, ...props }) {
         animate={isOpen ? "opened" : "closed"}
         variants={variants}
         transition={{
-          duration: 1.5,
+          duration: 0.650,
           ease: "easeOut",
         }}
         style={{ transformStyle: "preserve-3d" }}
