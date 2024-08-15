@@ -23,12 +23,12 @@ export default function Card({}) {
       
       <motion.div
         onClick={() => setIsOpen(true)}
-        className="aspect-[1.8] w-full max-w-screen-lg bg-transparent"
+        className="xl:aspect-[1.8] lg:aspect-[1.3] aspect-[0.4] w-full max-w-screen-lg bg-transparent"
         style={{ perspective: 1000, cursor: isOpen ? 'default' : 'pointer' }} // Add perspective here
         title={!isOpen && 'Open Letter'}
         disabled={isOpen}
       >
-      <div className="absolute -left-48 top-1/2 w-64 aspect-square ">
+      <div className="absolute lg:-left-48 top-1/2 lg:w-64 -left-12 w-24 aspect-square">
         <Image src='/stickers/computer.png' alt='' fill style={{ objectFit: "contain" }}/>
       </div>
         <motion.div
@@ -49,7 +49,7 @@ export default function Card({}) {
             style={{ backfaceVisibility: "hidden" }}
           >
             <Image
-              src="/test-card.jpg"
+              src="/test-card.png"
               alt="Welcome to Houston Post Card"
               fill
               style={{ objectFit: "cover" }}

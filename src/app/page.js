@@ -9,10 +9,10 @@ import { questions, RenderQuestion } from "@/utils/faq";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 pb-4">
+    <main className="flex min-h-screen flex-col items-center justify-between lg:p-24 md:py-24 p-6 py-16">
       <div className="flex w-full">
         <div className="flex-1 h-full">
-          <div className="relative max-h-60 h-full aspect-square">
+          <div className="relative max-h-60 h-full aspect-square md:block hidden">
             <Image
               src="/stickers/anime.png"
               alt=""
@@ -23,7 +23,7 @@ export default function Home() {
         </div>
         <CassettePlayer />
         <div className="flex-1 h-full">
-          <div className="relative max-h-60 h-full aspect-square top-1/2 translate-y-1/2">
+          <div className="relative max-h-60 h-full aspect-square top-1/2 translate-y-1/2 md:block hidden -z-10">
             <Image
               src="/stickers/yay.png"
               alt=""
@@ -33,9 +33,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      <div className="h-64 w-full flex justify-between">
-        <div className="relative max-h-60 h-full aspect-square -mt-20">
+      <div className="lg:h-64 h-32 w-full flex justify-between">
+        <div className="relative lg:max-h-60 max-h-24 h-full aspect-square md:-mt-20 -mt-10 -z-10">
           <Image
             src="/stickers/boba.png"
             alt=""
@@ -43,16 +42,16 @@ export default function Home() {
             style={{ objectFit: "contain" }}
           />
         </div>
-        <div className="relative max-h-60 h-full aspect-square">
+        <div className="relative lg:max-h-60 max-h-24 h-full aspect-square -z-10">
           <Image src="/stickers/nasa.png" alt="" fill style={{ objectFit: "contain" }}/>
         </div>
       </div>
       <Card />
-      <div className="h-64 w-full flex justify-between">{/*SPACER BOX*/}</div>
+      <div className="lg:h-64 h-32 w-full flex justify-between">{/*SPACER BOX*/}</div>
       <div className="w-full">
         <div className="flex flex-start w-full h-auto pb-16">
           <h2
-            className={`${specialFont.className} text-9xl text-purple font-bold rotate-[-12deg]`}
+            className={`${specialFont.className} lg:text-9xl text-4xl text-purple font-bold rotate-[-12deg]`}
           >
             SIGN UP TODAY!
           </h2>
@@ -63,13 +62,13 @@ export default function Home() {
           If you have any questions email us at <Link href='mailto://team@voyagehacks.com' className="underline text-purple font-bold">team@voyagehacks.com</Link>
         </p>
       </div>
-      <div className="h-64 w-full flex justify-between">
-        <div className="relative max-h-60 h-full aspect-square ml-auto translate-y-20 -z-10">
+      <div className="lg:h-64 h-32 w-full flex justify-between">
+        <div className="relative lg:max-h-60 max-h-32 h-full aspect-square ml-auto lg:translate-y-20 -z-10">
           <Image src="/stickers/mac.png" alt="" fill style={{ objectFit: "contain" }}/>
         </div>
       </div>
       <div>
-        <h2 className={`${headingFont.className} text-7xl text-purple`}>FUTURE PARTICIPANTS ARE ASKING</h2>
+        <h2 className={`${headingFont.className} lg:text-7xl text-4xl text-purple`}>FUTURE PARTICIPANTS <br className="lg:hidden"/> ARE ASKING</h2>
         <div className="py-6">
           {questions && questions.map(
             question => {
@@ -81,8 +80,8 @@ export default function Home() {
           
         </div>
       </div>
-      <div className="flex justify-between w-full text-purple text-2xl items-end">
-        <div className="relative max-w-32 w-full aspect-square">
+      <div className="flex justify-between w-full text-purple md:text-2xl text-lg items-end">
+        <div className="relative md:max-w-32 max-w-16 w-full aspect-square">
           <Image src="/stickers/sticker.png" alt="" fill style={{ objectFit: "contain" }}/>
         </div>
         <span className={specialFont.className}>Made with {"<3"} by the Voyage de la Lune Team</span>
