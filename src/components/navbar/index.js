@@ -81,7 +81,7 @@ export default function Navbar({}) {
         }}
         className={`fixed top-[60px] w-screen bg-bg z-40 p-6 shadow `}
       >
-        <li
+        <menu
           className={`list-none text-4xl flex flex-col gap-4 ${headingFont.className} font-normal`}
         >
           <Link
@@ -120,7 +120,7 @@ export default function Navbar({}) {
           >
             FAQ
           </Link>
-        </li>
+        </menu>
         Stay frosty ❄️
       </motion.div>
     </>

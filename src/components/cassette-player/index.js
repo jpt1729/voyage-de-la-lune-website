@@ -32,6 +32,7 @@ export default function CassettePlayer({}) {
         onClick={() => {
           setPlaying(!playing);
         }}
+        title='Play cassette audio'
       >
         <CassettePlayerSvg
           className="xl:w-[800px] lg:w-[512px] md:w-96 w-64 outline-none"
