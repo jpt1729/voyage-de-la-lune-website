@@ -27,16 +27,20 @@ export default function Home() {
             <Image
               src="/logo.png"
               alt="Voyage de la Lune Logo"
-              width={256*2/3}
-              height={185*2/3}
+              width={(256 * 2) / 3}
+              height={(185 * 2) / 3}
               quality={100}
               priority
             />
             <p>Houston{"'"}s premiere high school hackathon.</p>
-            <div className="flex flex-col text-2xl text-purple font-bold items-center">
-              
-              <span className={`${specialFont.className}`}> We have received some audio with more information.</span>
-              <DownArrowIcon className='w-12 h-12 rotate-[-4deg]'/>
+            <div className="flex flex-col text-3xl text-purple font-bold items-center">
+              <span className={`${specialFont.className}`}>
+                {" "}
+                We have received some audio with more information.
+              </span>
+              <span className={`${specialFont.className} text-lg`}>
+                {"(click the cassette to listen)"}
+              </span>
             </div>
           </div>
           <CassettePlayer />
@@ -65,6 +69,14 @@ export default function Home() {
             unoptimized
           />
         </div>
+        <div className="flex items-end">
+          <div className="flex flex-col text-3xl text-purple font-bold items-center mt-auto mb-4">
+            <span className={`${specialFont.className}`}>You got mail</span>
+            <span className={`${specialFont.className} text-lg`}>
+              {"(click the open)"}
+            </span>
+          </div>
+        </div>
         <div className="relative lg:max-h-60 max-h-24 h-full aspect-square -z-10">
           <Image
             src="/stickers/nasa.png"
@@ -89,13 +101,13 @@ export default function Home() {
           </h2>
         </div>
         <p className="max-w-screen-sm m-auto text-xl">
-          If you are still in high school, sign up today{" "}
+          If you are still in high school,
           <Link
             href="/apply"
-            title='Apply to Voyage de la Lune'
+            title="Apply to Voyage de la Lune"
             className="underline text-accent font-bold"
           >
-            here
+            sign up today
           </Link>{" "}
           by October 31st, 2024. <br />
           <br />
@@ -120,17 +132,26 @@ export default function Home() {
           />
         </div>
       </div>
-      <div id="faq" className="scroll-mt-16 pt-6">
+      <div id="faq" className="scroll-mt-16 pt-6 w-full">
         <h2
-          className={`${headingFont.className} lg:text-7xl text-4xl text-purple`}
+          className={`${headingFont.className} lg:text-7xl text-4xl text-purple text-center`}
         >
           FUTURE PARTICIPANTS <br className="lg:hidden" /> ARE ASKING
         </h2>
-        <div className="py-6">
+        <div className="py-6 max-w-screen-md m-auto">
           {questions &&
             questions.map((question) => {
               return <RenderQuestion key={question.id} question={question} />;
             })}
+          <p className="text-center">
+            <span className="font-bold italic">Any other questions?</span> Email us at{" "}
+            <Link
+              href="mailto://team@voyagehacks.com"
+              className="underline text-purple font-bold"
+            >
+              team@voyagehacks.com
+            </Link>
+          </p>
         </div>
       </div>
       <div className="flex justify-between w-full text-purple md:text-2xl text-lg items-end">
@@ -143,7 +164,7 @@ export default function Home() {
             style={{ objectFit: "contain" }}
           />
         </div>
-        <span className={specialFont.className}>
+        <span className={`${specialFont.className} font-bold`}>
           Made with {"<3"} by the Voyage de la Lune Team
         </span>
       </div>

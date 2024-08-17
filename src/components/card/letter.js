@@ -77,7 +77,7 @@ export default function Letter({}) {
           </div>
         </div>
       </div>
-      <div className="absolute right-0 bottom-0 aspect-[4/3] lg:w-48 md:w-32 w-16">
+      <div className="absolute right-0 bottom-0 aspect-[1.43] lg:w-48 md:w-32 w-16">
         <Image
           src="/stickers/enjoy.png"
           fill

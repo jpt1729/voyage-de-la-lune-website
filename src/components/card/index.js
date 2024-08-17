@@ -24,7 +24,7 @@ export default function Card({}) {
       <motion.div
         id='card'
         onClick={() => setIsOpen(true)}
-        className="xl:aspect-[1.8] lg:aspect-[1.3] aspect-[0.4] w-full max-w-screen-lg bg-transparent scroll-mt-16"
+        className="xl:aspect-[1.8] lg:aspect-[1.3] aspect-[0.4] w-full max-w-screen-lg bg-transparent scroll-mt-20"
         style={{ perspective: 1000, cursor: isOpen ? 'default' : 'pointer' }} // Add perspective here
         title={!isOpen ? 'Open Letter' : null}
         disabled={isOpen}

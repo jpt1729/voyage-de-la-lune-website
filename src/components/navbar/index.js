@@ -26,32 +26,49 @@ export default function Navbar({}) {
           <h1 className={`${workbench.className} text-accent font-normal`}>
             VOYAGE DE LA LUNE
           </h1>
-          <li className="list-none md:flex gap-4 hidden">
-            <Link
-              href="#home"
-              className="hover:text-accent transition-colors hover:underline"
-            >
-              HOME
-            </Link>
-            <Link
-              href="#card"
-              className="hover:text-accent transition-colors hover:underline"
-            >
-              ABOUT
-            </Link>
-            <Link
-              href="#apply"
-              className="hover:text-accent transition-colors hover:underline"
-            >
-              APPLY
-            </Link>
-            <Link
-              href="#faq"
-              className="hover:text-accent transition-colors hover:underline"
-            >
-              FAQ
-            </Link>
-          </li>
+          <ol className="list-none md:flex gap-4 hidden">
+            <li>
+              <Link
+                href="#home"
+                className="hover:text-accent transition-colors hover:underline"
+              >
+                HOME
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="#card"
+                className="hover:text-accent transition-colors hover:underline"
+              >
+                ABOUT
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="#apply"
+                className="hover:text-accent transition-colors hover:underline"
+              >
+                APPLY
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="#faq"
+                className="hover:text-accent transition-colors hover:underline"
+              >
+                FAQ
+              </Link>
+            </li>
+            {/*<li className="ml-4">
+              <div>
+                <button className="text-accent" title="Set language to English">
+                  EN
+                </button>
+                <span>/</span>
+                <button title="Cambiar el idioma a español">ES</button>
+              </div>
+            </li>*/}
+          </ol>
           <MenuButton
             title="Open navbar menu"
             onClick={() => {
@@ -84,42 +101,59 @@ export default function Navbar({}) {
         <menu
           className={`list-none text-4xl flex flex-col gap-4 ${headingFont.className} font-normal`}
         >
-          <Link
-            href="#home"
-            onClick={() => {
-              setIsOpen(false)
-            }}
-            className="hover:text-accent transition-colors hover:underline"
-          >
-            HOME
-          </Link>
-          <Link
-            href="#card"
-            onClick={() => {
-              setIsOpen(false)
-            }}
-            className="hover:text-accent transition-colors hover:underline"
-          >
-            ABOUT
-          </Link>
-          <Link
-            href="#apply"
-            onClick={() => {
-              setIsOpen(false)
-            }}
-            className="hover:text-accent transition-colors hover:underline"
-          >
-            APPLY
-          </Link>
-          <Link
-            href="#faq"
-            onClick={() => {
-              setIsOpen(false)
-            }}
-            className="hover:text-accent transition-colors hover:underline"
-          >
-            FAQ
-          </Link>
+          <li>
+            <Link
+              href="#home"
+              onClick={() => {
+                setIsOpen(false);
+              }}
+              className="hover:text-accent transition-colors hover:underline"
+            >
+              HOME
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="#card"
+              onClick={() => {
+                setIsOpen(false);
+              }}
+              className="hover:text-accent transition-colors hover:underline"
+            >
+              ABOUT
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="#apply"
+              onClick={() => {
+                setIsOpen(false);
+              }}
+              className="hover:text-accent transition-colors hover:underline"
+            >
+              APPLY
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="#faq"
+              onClick={() => {
+                setIsOpen(false);
+              }}
+              className="hover:text-accent transition-colors hover:underline"
+            >
+              FAQ
+            </Link>
+          </li>
+          {/*<li className="mt-4">
+            <div>
+              <button className="text-accent" title="Set language to English">
+                EN
+              </button>
+              <span>/</span>
+              <button title="Cambiar el idioma a español">ES</button>
+            </div>
+          </li>*/}
         </menu>
         Stay frosty ❄️
       </motion.div>
