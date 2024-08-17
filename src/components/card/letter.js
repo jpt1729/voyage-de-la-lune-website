@@ -52,9 +52,7 @@ export default function Letter({}) {
       <div className="flex-1 flex flex-col lg:justify-around justify-center">
         <div>
           <div className="lg:flex justify-end hidden">
-            <div className="relative w-32 h-[80px]">
-              <Image src="/stamp.png" alt="stamp" fill />
-            </div>
+            <Image src="/stamp.png" alt="stamp" width={128} height={128} unoptimized/>
           </div>
           <h3
             className={`${specialFont.className} text-5xl rotate-[15deg] text-[#5755FE] font-bold lg:block hidden`}
@@ -78,10 +76,15 @@ export default function Letter({}) {
             <hr className="border-t-[2px] border-black/25" />
           </div>
         </div>
-        
       </div>
-      <div className="absolute right-0 bottom-0 aspect-[4/3] lg:w-48 md:w-30 w-16">
-        <Image src='/stickers/enjoy.png' fill alt="Hack Club`s enjoy sticker"/>
+      <div className="absolute right-0 bottom-0 aspect-[4/3] lg:w-48 md:w-32 w-16">
+        <Image
+          src="/stickers/enjoy.png"
+          fill
+          sizes="(min-width: 1024px) 192px, (min-width: 1024px) 128px, 64px"
+          alt="Hack Club`s enjoy sticker"
+          unoptimized
+        />
       </div>
     </div>
   );

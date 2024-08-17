@@ -26,7 +26,7 @@ export default function Card({}) {
         onClick={() => setIsOpen(true)}
         className="xl:aspect-[1.8] lg:aspect-[1.3] aspect-[0.4] w-full max-w-screen-lg bg-transparent scroll-mt-16"
         style={{ perspective: 1000, cursor: isOpen ? 'default' : 'pointer' }} // Add perspective here
-        title={!isOpen && 'Open Letter'}
+        title={!isOpen ? 'Open Letter' : null}
         disabled={isOpen}
       >
       <div className="absolute lg:-left-48 top-1/2 lg:w-64 -left-12 w-24 aspect-square">
@@ -35,7 +35,9 @@ export default function Card({}) {
           alt='' 
           fill 
           style={{ objectFit: "contain" }} 
-          sizes="(min-width: 1024px) 256px, 96px"/>
+          sizes="(min-width: 1024px) 256px, 96px"
+          priority
+          />
       </div>
         <motion.div
           className="relative w-full h-full"
@@ -59,6 +61,7 @@ export default function Card({}) {
               alt="Welcome to Houston Post Card"
               fill
               style={{ objectFit: "cover" }}
+              priority
             />
           </div>
           <Letter/>

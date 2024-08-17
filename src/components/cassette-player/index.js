@@ -35,7 +35,7 @@ export default function CassettePlayer({}) {
         title='Play cassette audio'
       >
         <CassettePlayerSvg
-          className="xl:w-[800px] lg:w-[512px] md:w-96 w-64 outline-none"
+          className="xl:w-[640px] lg:w-[512px] md:w-96 w-64 outline-none"
           whileHover={{
             scale: 1.01,
             transition: { duration: 0.3 },

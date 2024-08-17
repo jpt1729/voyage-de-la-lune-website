@@ -4,6 +4,7 @@ import Card from "@/components/card";
 import Link from "next/link";
 
 import { specialFont, headingFont } from "@/utils/fonts";
+import DownArrowIcon from "@/components/icons/down-arrow";
 
 import { questions, RenderQuestion } from "@/utils/faq";
 
@@ -21,10 +22,22 @@ export default function Home() {
             unoptimized
           />
         </div>
-        <div>
-          <div className="">
-            <Image src='/logo.png' alt='Voyage de la Lune Logo' width={256/2} height={185/2} quality={100} priority/>
+        <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center">
+            <Image
+              src="/logo.png"
+              alt="Voyage de la Lune Logo"
+              width={256*2/3}
+              height={185*2/3}
+              quality={100}
+              priority
+            />
             <p>Houston{"'"}s premiere high school hackathon.</p>
+            <div className="flex flex-col text-2xl text-purple font-bold items-center">
+              
+              <span className={`${specialFont.className}`}> We have received some audio with more information.</span>
+              <DownArrowIcon className='w-12 h-12 rotate-[-4deg]'/>
+            </div>
           </div>
           <CassettePlayer />
         </div>
@@ -78,7 +91,8 @@ export default function Home() {
         <p className="max-w-screen-sm m-auto text-xl">
           If you are still in high school, sign up today{" "}
           <Link
-            href="https://link.com/id?10293102321"
+            href="/apply"
+            title='Apply to Voyage de la Lune'
             className="underline text-accent font-bold"
           >
             here
