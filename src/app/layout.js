@@ -1,3 +1,5 @@
+import { SpeedInsights } from '@vercel/speed-insights/next';
+
 import Navbar from "@/components/navbar";
 
 import { paragraphFont } from "@/utils/fonts";
@@ -14,7 +16,7 @@ export default function RootLayout({ children }) {
       <body className={paragraphFont.className}>
         <Navbar />
         {children}
-        
+        <SpeedInsights />
       </body>
     </html>
   );
