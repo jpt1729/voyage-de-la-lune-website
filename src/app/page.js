@@ -3,10 +3,15 @@ import CassettePlayer from "@/components/cassette-player/index";
 import Card from "@/components/card";
 import Link from "next/link";
 
+import Formspree from "@/components/icons/formspree";
+import Desmos from "@/components/icons/desmos";
+import Signals37 from "@/components/icons/37signals";
+
 import { specialFont, headingFont } from "@/utils/fonts";
-import DownArrowIcon from "@/components/icons/down-arrow";
 
 import { questions, RenderQuestion } from "@/utils/faq";
+
+import { EnableSubtitlesButton } from "@/components/Audio/subtitles";
 
 export default function Home() {
   return (
@@ -23,7 +28,7 @@ export default function Home() {
           />
         </div>
         <div className="flex flex-col items-center">
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center max-w-screen-sm">
             <Image
               src="/logo.png"
               alt="Voyage de la Lune Logo"
@@ -32,15 +37,18 @@ export default function Home() {
               quality={100}
               priority
             />
-            <p>Houston{"'"}s premiere high school hackathon.</p>
+            <p className="text-center">Save the Moon! Join 150+ high schoolers in a 44-hour mission at Voyage de la Lune Hackathon. Win prizes, learn from experts, and become a space hero. {"Let's"} conquer space together!</p>
             <div className="flex flex-col text-3xl text-purple font-bold items-center">
               <span className={`${specialFont.className}`}>
                 {" "}
                 We have received some audio with more information.
               </span>
-              <span className={`${specialFont.className} text-lg`}>
-                {"(click the cassette to listen)"}
-              </span>
+              <div className={`${specialFont.className} text-lg`}>
+                <span className={`pr-1`}>
+                  {"(click the cassette to listen)"}
+                </span>
+                <EnableSubtitlesButton/>
+              </div>
             </div>
           </div>
           <CassettePlayer />
@@ -144,7 +152,8 @@ export default function Home() {
               return <RenderQuestion key={question.id} question={question} />;
             })}
           <p className="text-center">
-            <span className="font-bold italic">Any other questions?</span> Email us at{" "}
+            <span className="font-bold italic">Any other questions?</span> Email
+            us at{" "}
             <Link
               href="mailto://team@voyagehacks.com"
               className="underline text-purple font-bold"
@@ -152,6 +161,35 @@ export default function Home() {
               team@voyagehacks.com
             </Link>
           </p>
+        </div>
+      </div>
+      <div className="lg:h-32 h-16 w-full flex justify-between">
+        {/*SPACER BOX*/}
+      </div>
+      <div>
+        <div>
+          <h2
+            className={`${headingFont.className} lg:text-7xl text-4xl text-purple text-center`}
+          >
+            Our Sponsors
+          </h2>
+          <p>
+            The companies that help make Voyage de la Lune possible!
+            <br />
+            <br />
+            Interested in becoming a sponsor? Email us at{" "}
+            <Link
+              href="mailto://team@voyagehacks.com"
+              className="underline text-purple font-bold"
+            >
+              team@voyagehacks.com
+            </Link>
+          </p>
+        </div>
+        <div className="flex gap-6 flex-wrap mt-6 justify-center">
+          <Signals37 />
+          <Desmos />
+          <Formspree />
         </div>
       </div>
       <div className="flex justify-between w-full text-purple md:text-2xl text-lg items-end">

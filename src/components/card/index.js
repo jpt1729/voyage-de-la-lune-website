@@ -53,14 +53,30 @@ export default function Card({}) {
           style={{ transformStyle: "preserve-3d" }} // Ensure preserve-3d is on the inner div
         >
           <div
-            className="absolute w-full h-full shadow-lg"
+            className="absolute w-full h-full shadow-lg flex items-center justify-center bg-[#F6EEE3]"
             style={{ backfaceVisibility: "hidden" }}
           >
-            <Image
+            {/*<Image
               src="/test-card.png"
               alt="Welcome to Houston Post Card"
               fill
               style={{ objectFit: "cover" }}
+              priority
+            />*/}
+            <Image
+              src="/paper-texture.jpg"
+              alt="Welcome to Houston Post Card"
+              fill
+              className="opacity-15"
+              style={{ objectFit: "cover" }}
+              priority
+            />
+            <Image
+              src="/logo.png"
+              alt="Voyage de la Lune Logo"
+              width={256}
+              height={185}
+              quality={100}
               priority
             />
           </div>

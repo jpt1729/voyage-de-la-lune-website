@@ -9,6 +9,14 @@ export default function Letter({}) {
       className={`absolute w-full h-full flex lg:flex-row flex-col lg:p-12 p-6 shadow-lg lg:gap-6 gap-3`}
       style={{ backfaceVisibility: "hidden", transform: "rotateX(180deg)" }} // Rotate back side
     >
+      <Image
+        src="/paper-texture.jpg"
+        alt="Welcome to Houston Post Card"
+        fill
+        className="opacity-15 -z-10"
+        style={{ objectFit: "cover" }}
+        priority
+      />
       <div className={`${paragraphFont.className} flex-1`}>
         <p className="text-sm">
           Dear hacker, <br />
@@ -52,7 +60,13 @@ export default function Letter({}) {
       <div className="flex-1 flex flex-col lg:justify-around justify-center">
         <div>
           <div className="lg:flex justify-end hidden">
-            <Image src="/stamp.png" alt="stamp" width={128} height={128} unoptimized/>
+            <Image
+              src="/stamp.png"
+              alt="stamp"
+              width={128}
+              height={128}
+              unoptimized
+            />
           </div>
           <h3
             className={`${specialFont.className} text-5xl rotate-[15deg] text-[#5755FE] font-bold lg:block hidden`}
