@@ -19,7 +19,7 @@ export default function Navbar({}) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <div className="fixed top-0 left-0 flex justify-center w-screen z-50 py-4 bg-bg border-b-accent border-b-2 shadow">
+      <div className="fixed top-0 left-0 flex justify-center w-screen z-50 py-4 bg-bg border-b-accent border-b-2">
         <nav
           className={`w-full max-w-screen-xl items-center ${headingFont.className} flex justify-between md:text-4xl text-xl md:px-2 px-6 `}
         >

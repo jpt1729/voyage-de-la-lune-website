@@ -58,7 +58,7 @@ export default function Home() {
                 {"Let's"} conquer space together!
               </span>
             </p>
-            <div className="flex flex-col text-3xl text-purple font-bold items-center">
+            <div className="flex flex-col text-3xl text-purple font-bold items-center mt-4">
               <span className={`${specialFont.className}`}>
                 {" "}
                 We have received some audio with more information.
