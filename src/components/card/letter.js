@@ -37,7 +37,7 @@ export default function Letter({}) {
         </p>
         <br/>
         <div>
-          <p>Alex N, Alex P, Jesyln, John, Kyra, Lena, Max, and Nick</p>
+          <p>Alex N, Alex P, Jeslyn, John, Kyra, Lena, Max, and Nick</p>
         </div>
       </div>
       <div className="flex lg:flex-col items-center gap-2">
