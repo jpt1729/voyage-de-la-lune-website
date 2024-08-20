@@ -8,12 +8,15 @@ import "./globals.css";
 
 export const metadata = {
   title: "Voyage de la Lune Hackathon",
-  description: `Save the Moon! Join 150+ high schoolers in a 44-hour mission at Houston’s Voyage de la Lune Hackathon. Win prizes, learn from experts, and save the botched moon trip. Let's conquer space together!`,
+  description: `Voyage de la Lune Hackathon is Houston’s biggest in-person high school hackathon. Join 150+ high schoolers in a 44-hour mission. Win prizes, learn from experts, and save the botched moon trip. Save this botched moon trip!`,
   openGraph: {
     siteName: "Voyage de la Lune Hackathon",
     url: "https://voyagehacks.com",
     locale: 'en_US',
     type: 'website',
+  },
+  twitter: {
+    title: "Voyage de la Lune: Houston's lunar hackathon"
   }
 };
 

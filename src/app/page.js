@@ -98,10 +98,9 @@ export default function Home() {
           />
         </div>
         <div className="flex items-end">
-          <div className="flex flex-col text-3xl text-purple font-bold items-center mt-auto mb-4">
-            <span className={`${specialFont.className}`}>You got mail</span>
+          <div className="flex flex-col text-purple font-bold items-center mt-auto mb-4">
             <span className={`${specialFont.className} text-lg`}>
-              {"(click the open)"}
+              {"(click the open mail)"}
             </span>
           </div>
         </div>
@@ -123,7 +122,7 @@ export default function Home() {
         </div>
         <div className="flex flex-start w-full h-auto pb-16">
           <h2
-            className={`${specialFont.className} lg:text-9xl text-4xl text-purple font-bold rotate-[-12deg]`}
+            className={`${specialFont.className} lg:text-9xl text-5xl text-purple font-bold rotate-[-12deg]`}
           >
             SIGN UP SOON!
           </h2>
@@ -163,7 +162,7 @@ export default function Home() {
       </div>
       <div id="faq" className="scroll-mt-16 pt-6 w-full">
         <h2
-          className={`${headingFont.className} lg:text-7xl text-4xl text-purple text-center`}
+          className={`${headingFont.className} lg:text-8xl text-5xl text-purple text-center`}
         >
           FUTURE PARTICIPANTS <br className="lg:hidden" /> ARE ASKING
         </h2>

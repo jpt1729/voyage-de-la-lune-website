@@ -68,12 +68,12 @@ export default function Letter({}) {
               unoptimized
             />
           </div>
-          <h3
+          <span
             className={`${specialFont.className} text-5xl rotate-[15deg] text-[#5755FE] font-bold lg:block hidden`}
           >
             {false && "YOU HAVE UNTIL 10/31/24 TO SIGN UP"}
             MORE INFORMATION ON SIGNING UP SOON
-          </h3>
+          </span>
         </div>
         <div
           className={`${paragraphFont.className} lg:text-4xl text-xl font-normal flex flex-col relative mt-10`}

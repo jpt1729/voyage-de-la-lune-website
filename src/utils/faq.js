@@ -10,7 +10,8 @@ export const questions = [
   {
     id: "2",
     name: "John",
-    question: "Houston is pretty big and gas is expensive. Can you pay for my gas?",
+    question:
+      "Houston is pretty big and gas is expensive. Can you pay for my gas?",
     answer: (
       <>
         <Link
@@ -48,6 +49,22 @@ export const questions = [
       </>
     ),
   },
+  {
+    id: "5",
+    name: "Alex",
+    question: "Do I need a team?",
+    answer: (
+      <>
+        You can always form a team at the event itself, or you can come up with
+        teams beforehand. You can get a head start by joining our{" "}
+        <Link
+          href="https://hackclub.slack.com/archives/C074XH3KAMN"
+          title="Join Hack Club's Slack"
+          className="underline text-purple font-bold"
+        >Hack Club Slack channel</Link> 👀
+      </>
+    ),
+  },
 ];
 
 export function RenderQuestion({ question }) {
@@ -58,7 +75,9 @@ export function RenderQuestion({ question }) {
         <span className="font-bold">{question.question}</span>
       </p>
       <div className="flex justify-end py-6">
-        <p className="max-w-screen-sm w-full ml-auto">We say: “{question.answer}”</p>
+        <p className="max-w-screen-sm w-full ml-auto">
+          We say: “{question.answer}”
+        </p>
       </div>
     </>
   );

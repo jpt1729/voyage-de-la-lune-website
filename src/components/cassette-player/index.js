@@ -14,6 +14,7 @@ export default function CassettePlayer({}) {
       <button
         onClick={toggleAudio}
         title='Play cassette audio'
+        tabIndex={0}
       >
         <CassettePlayerSvg
           className="xl:w-[640px] lg:w-[512px] md:w-96 w-80 outline-none"

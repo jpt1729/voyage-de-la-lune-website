@@ -30,7 +30,7 @@ export default function Subtitle({}) {
 
   const subtitleText = getSubtitleText(currentTime);
   return (
-    <div className="fixed md:bottom-3 bottom-20 left-1/2 -translate-x-1/2 bg-black/80 text-white px-6 py-1 text-xl lg:w-auto w-full">
+    <div className="fixed md:bottom-3 bottom-20 left-1/2 -translate-x-1/2 bg-black/80 text-white px-6 py-1 text-xl lg:w-auto w-full" lang='EN-us'>
       <p>{subtitleText}</p>
     </div>
   );
