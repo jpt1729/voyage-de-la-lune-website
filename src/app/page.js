@@ -37,17 +37,37 @@ export default function Home() {
               quality={100}
               priority
             />
-            <p className="text-center">Save the Moon! Join 150+ high schoolers in a 44-hour mission at Voyage de la Lune Hackathon. Win prizes, learn from experts, and become a space hero. {"Let's"} conquer space together!</p>
+            <p className="text-center">
+              Save the Moon! Join{" "}
+              <span
+                className={`${specialFont.className} text-purple font-bold text-2xl`}
+              >
+                150+ high schoolers
+              </span>{" "}
+              in a{" "}
+              <span
+                className={`${specialFont.className} text-purple font-bold text-2xl`}
+              >
+                44-hour mission
+              </span>{" "}
+              at Voyage de la Lune Hackathon. Win prizes, learn from experts,
+              and save the botched moon trip.{" "}
+              <span
+                className={`${specialFont.className} text-accent font-bold text-2xl`}
+              >
+                {"Let's"} conquer space together!
+              </span>
+            </p>
             <div className="flex flex-col text-3xl text-purple font-bold items-center">
               <span className={`${specialFont.className}`}>
                 {" "}
                 We have received some audio with more information.
               </span>
               <div className={`${specialFont.className} text-lg`}>
-                <span className={`pr-1`}>
+                <span className={`pr-1 text-accent`}>
                   {"(click the cassette to listen)"}
                 </span>
-                <EnableSubtitlesButton/>
+                <EnableSubtitlesButton />
               </div>
             </div>
           </div>
@@ -105,11 +125,11 @@ export default function Home() {
           <h2
             className={`${specialFont.className} lg:text-9xl text-4xl text-purple font-bold rotate-[-12deg]`}
           >
-            SIGN UP TODAY!
+            SIGN UP SOON!
           </h2>
         </div>
         <p className="max-w-screen-sm m-auto text-xl">
-          If you are still in high school,
+          {/*If you are still in high school,{" "}
           <Link
             href="/apply"
             title="Apply to Voyage de la Lune"
@@ -117,7 +137,8 @@ export default function Home() {
           >
             sign up today
           </Link>{" "}
-          by October 31st, 2024. <br />
+          by October 31st, 2024. <br />*/}
+          Sign ups {"aren't"} open yet. <br/>
           <br />
           If you have any questions email us at{" "}
           <Link
@@ -177,7 +198,7 @@ export default function Home() {
             The companies that help make Voyage de la Lune possible!
             <br />
             <br />
-            Interested in becoming a sponsor? Email us at{" "}
+            {"We're"} still looking for sponsors! Interested? Email us at{" "}
             <Link
               href="mailto://team@voyagehacks.com"
               className="underline text-purple font-bold"

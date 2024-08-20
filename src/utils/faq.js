@@ -5,12 +5,12 @@ export const questions = [
     id: "1",
     name: "Nelly",
     question: "Where will Voyage de la Lune hackathon take place?",
-    answer: "xxx HQ, XXX address",
+    answer: "We will release the location soon 👀",
   },
   {
     id: "2",
     name: "John",
-    question: "The venue is kind of far away. Can you pay for my gas?",
+    question: "Houston is pretty big and gas is expensive. Can you pay for my gas?",
     answer: (
       <>
         <Link
@@ -20,8 +20,7 @@ export const questions = [
         >
           HackClub gas fund
         </Link>{" "}
-        can pay for your gas! If you are from out of state, we are also
-        providing travel stipends
+        can reimburse your gas costs!
       </>
     ),
   },

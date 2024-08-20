@@ -19,26 +19,26 @@ export default function Letter({}) {
       />
       <div className={`${paragraphFont.className} flex-1`}>
         <p className="text-sm">
-          Dear hacker, <br />
-          <br />
-          Just a few months ago, the world fell into a zombie apocalypse. It’s
-          absurd how fast civilization has fallen to the virus.
-          <br />
-          <br />
-          Cities have turned to battlefields. Subways and schools have grown
-          infected with the fallen. <br />
-          <br />
-          {"It's"} the beginning of the end. <br />
-          <br />
-          But one thing still stands: technology. WiFi is up, electricity runs,
-          and hardware operates. <br />
-          <br />
-          Join 150 hackers like you for 44 hours at our safehouse. Build
-          something, anything, to help us survive this apocalypse. <br />
-          <br />
-          So, what will you make? Humanity is counting on you. From the
-          Apocalypse team...
+          Dear hacker, <br/>
+          <br/>
+          As you know, we are planning our first human moon colony.
+          Over the past few months, we have been developing the technology
+          necessary to support such a feat. <br/>
+          <br/>
+          Our enemies have broken into all of our technology, rendering it worthless. Thousands of dollars of tech
+          rendered to shiny paper weights. <br/>
+          <br/>
+          We need your help to build new technology to send to the moon. We have snacks, coffee, and wifi. <br/>
+          <br/>
+          Join 150 hackers like you for 44 hours at our safehouse. Build
+          something, anything, to help us start our moon colony. <br/>
+          <br/>
+          Space City needs you. From the Voyage de la Lune Team…
         </p>
+        <br/>
+        <div>
+          <p>Alex N, Alex P, Jesyln, John, Kyra, Lena, Max, and Nick</p>
+        </div>
       </div>
       <div className="flex lg:flex-col items-center gap-2">
         <div className="lg:w-[2px] lg:h-auto w-auto h-[2px] bg-black/25 flex-grow" />
@@ -71,7 +71,8 @@ export default function Letter({}) {
           <h3
             className={`${specialFont.className} text-5xl rotate-[15deg] text-[#5755FE] font-bold lg:block hidden`}
           >
-            YOU HAVE UNTIL 10/31/24 TO SIGN UP
+            {false && "YOU HAVE UNTIL 10/31/24 TO SIGN UP"}
+            MORE INFORMATION ON SIGNING UP SOON
           </h3>
         </div>
         <div
@@ -91,11 +92,11 @@ export default function Letter({}) {
           </div>
         </div>
       </div>
-      <div className="absolute right-0 bottom-0 aspect-[1.43] lg:w-48 md:w-32 w-16">
+      <div className="absolute right-0 bottom-0 aspect-[1.43] lg:w-48 w-32">
         <Image
           src="/stickers/enjoy.png"
           fill
-          sizes="(min-width: 1024px) 192px, (min-width: 1024px) 128px, 64px"
+          sizes="(min-width: 1024px) 192px, 128px"
           alt="Hack Club`s enjoy sticker"
           unoptimized
         />

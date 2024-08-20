@@ -30,7 +30,7 @@ export default function Subtitle({}) {
 
   const subtitleText = getSubtitleText(currentTime);
   return (
-    <div className="fixed bottom-3 left-1/2 -translate-x-1/2 bg-black/80 text-white px-6 py-1 text-xl">
+    <div className="fixed md:bottom-3 bottom-20 left-1/2 -translate-x-1/2 bg-black/80 text-white px-6 py-1 text-xl lg:w-auto w-full">
       <p>{subtitleText}</p>
     </div>
   );
@@ -41,7 +41,7 @@ export function EnableSubtitlesButton() {
   return (
     <button
       onClick={toggleSubtitles}
-      className={`hover:underline pl-1 outline-none border-none`}
+      className={`hover:underline pl-1 outline-none border-none color-purple`}
       title='Enable subtitles for audio'
     >
       {subtitlesEnabled ? "(disable subtitles)" : "(enable subtitles)"}
