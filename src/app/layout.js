@@ -8,7 +8,7 @@ import "./globals.css";
 
 export const metadata = {
   title: "Voyage de la Lune Hackathon",
-  description: `Save the Moon! Join 150+ high schoolers in a 44-hour mission at Houston’s Voyage de la Lune Hackathon. Win prizes, learn from experts, and become a space hero. Let's conquer space together!`,
+  description: `Save the Moon! Join 150+ high schoolers in a 44-hour mission at Houston’s Voyage de la Lune Hackathon. Win prizes, learn from experts, and save the botched moon trip. Let's conquer space together!`,
   openGraph: {
     siteName: "Voyage de la Lune Hackathon",
     url: "https://voyagehacks.com",
